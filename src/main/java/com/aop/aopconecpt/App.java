@@ -9,6 +9,7 @@ import com.aop.aopconcept.services.PaymentService;
  * Hello world!
  *
  */
+
 public class App 
 {
     public static void main( String[] args )
@@ -16,8 +17,10 @@ public class App
 //        System.out.println( "Hello World!" );
     	
     	ApplicationContext context = new ClassPathXmlApplicationContext("com/aop/aopconecpt/config.xml");
-    	
+    
     	PaymentService paymentObject = context.getBean("payment", PaymentService.class);
+    	
+    	
     	paymentObject.makePayment(); // join point 
     }
 }
